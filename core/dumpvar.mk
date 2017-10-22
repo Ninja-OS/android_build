@@ -78,7 +78,11 @@ ifdef dumpvar_goals
   absolute_dumpvar := $(strip $(filter abs-%,$(dumpvar_goals)))
   ifdef absolute_dumpvar
     dumpvar_goals := $(patsubst abs-%,%,$(dumpvar_goals))
-    DUMPVAR_VALUE := $(abspath $($(dumpvar_goals)))
+    ifneq ($(filter /%,$($(dumpvar_goals))),)
+      DUMPVAR_VALUE := $($(dumpvar_goals))
+    else
+      DUMPVAR_VALUE := $(PWD)/$($(dumpvar_goals))
+    endif
     dumpvar_target := dumpvar-abs-$(dumpvar_goals)
   else
     DUMPVAR_VALUE := $($(dumpvar_goals))
@@ -93,13 +97,6 @@ endif # dumpvar_goals
 
 ifneq ($(dumpvar_goals),report_config)
 PRINT_BUILD_CONFIG:=
-endif
-
-ifneq ($(filter report_config,$(DUMP_MANY_VARS)),)
-# Construct the shell commands that print the config banner.
-report_config_sh := echo '============================================';
-report_config_sh += $(foreach v,$(print_build_config_vars),echo '$v=$($(v))';)
-report_config_sh += echo '============================================';
 endif
 
 # Dump mulitple variables to "<var>=<value>" pairs, one per line.
@@ -124,8 +121,4 @@ endif
 endif # CALLED_FROM_SETUP
 
 ifneq ($(PRINT_BUILD_CONFIG),)
-$(info ============================================)
-$(foreach v, $(print_build_config_vars),\
-  $(info $v=$($(v))))
-$(info ============================================)
 endif

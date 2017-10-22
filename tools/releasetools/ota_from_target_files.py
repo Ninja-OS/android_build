@@ -479,23 +479,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
     # Stage 3/3: Make changes.
     script.Comment("Stage 3/3")
-  script.Print("=====================================")
-  script.Print("                                     ")
-  script.Print("  $$   $$                            ")
-  script.Print("  $$$  $$                            ")
-  script.Print("  $$$$ $$  $$  $$$$$$$  $$  $$$$$$$  ")
-  script.Print("  $$ $$$$      $$   $$           $$  ")
-  script.Print("  $$ $$$$  $$  $$   $$  $$  $$$$$$$  ")
-  script.Print("  $$  $$$  $$  $$   $$  $$  $$   $$  ")
-  script.Print("  $$   $$  $$  $$   $$  $$  $$$$$$$  ")
-  script.Print("                        $$           ")     
-  script.Print("                    $$$$$$           ")
-  script.Print("                                     ")
-  script.Print(" NinjaOS - a rom based on AOSP 8.1.0 ")
-  script.Print("                 by                  ")
-  script.Print("   Shaik Jaleel and Vinesh Iyappan   ")
-  script.Print("=====================================")
-  script.AppendExtra("sleep (2);")
 
   # Dump fingerprints
   script.Print("Target: %s" % target_fp)
@@ -514,6 +497,23 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.Unmount("/system")
 
   system_progress = 0.75
+
+  script.Print("=====================================")
+  script.Print("                                     ")
+  script.Print("  $$   $$                            ")
+  script.Print("  $$$  $$                            ")
+  script.Print("  $$$$ $$  $$  $$$$$$$  $$  $$$$$$$  ")
+  script.Print("  $$ $$$$      $$   $$           $$  ")
+  script.Print("  $$ $$$$  $$  $$   $$  $$  $$$$$$$  ")
+  script.Print("  $$  $$$  $$  $$   $$  $$  $$   $$  ")
+  script.Print("  $$   $$  $$  $$   $$  $$  $$$$$$$  ")
+  script.Print("                        $$           ")
+  script.Print("                    $$$$$$           ")
+  script.Print("                                     ")
+  script.Print(" NinjaOS - a rom based on AOSP 8.1.0 ")
+  script.Print("                 by                  ")
+  script.Print("   Shaik Jaleel and Vinesh Iyappan   ")
+  script.Print("=====================================")
 
   if OPTIONS.wipe_user_data:
     system_progress -= 0.1
