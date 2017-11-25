@@ -24,7 +24,6 @@ PRODUCT_PACKAGES += \
     BasicDreams \
     BlockedNumberProvider \
     BookmarkProvider \
-    Browser2 \
     BuiltInPrintService \
     Calendar \
     CalendarProvider \
@@ -38,6 +37,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     ExternalStorageProvider \
     FusedLocation \
+    GalleryX \
     InputDevices \
     KeyChain \
     Keyguard \
@@ -45,6 +45,7 @@ PRODUCT_PACKAGES += \
     Launcher2 \
     ManagedProvisioning \
     MtpDocumentsProvider \
+    OmniJaws \
     PicoTts \
     PacProcessor \
     libpac \
