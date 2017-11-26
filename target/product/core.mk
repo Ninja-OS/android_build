@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher2 \
     ManagedProvisioning \
+    Messaging \
     MtpDocumentsProvider \
     OmniJaws \
     PicoTts \
