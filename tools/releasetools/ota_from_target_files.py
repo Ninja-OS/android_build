@@ -498,6 +498,21 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   system_progress = 0.75
 
+  script.Print("*************************************************************************");
+  script.Print("                              TEAM SHADOW PRESENTS                       ");
+  script.Print(" _         _________   _         _________   _______    _______  _______ ");
+  script.Print("( (    /|  \__   __/  ( (    /|  \__    _/  (  ___  )  (  ___  )(  ____ \");
+  script.Print("|  \  ( |     ) (     |  \  ( |     )  (    | (   ) |  | (   ) || (    \/");
+  script.Print("|   \ | |     | |     |   \ | |     |  |    | (___) |  | |   | || (_____ ");
+  script.Print("| (\ \) |     | |     | (\ \) |     |  |    |  ___  |  | |   | |(_____  )");
+  script.Print("| | \   |     | |     | | \   |     |  |    | (   ) |  | |   | |      ) |");
+  script.Print("| )  \  |  ___) (___  | )  \  |  |\_)  )    | )   ( |  | (___) |/\____) |");
+  script.Print("|/    )_)  \_______/  |/    )_)  (____/     |/     \|  (_______)\_______)");
+  script.Print("                                                                         ");
+  script.Print("                    A AOSP PROJECT BY iamsj7 AND theHari                 ");
+  script.Print("                             FROM THE SHADOW                             ");
+  script.Print("*************************************************************************");
+
   if OPTIONS.wipe_user_data:
     system_progress -= 0.1
   if HasVendorPartition(input_zip):
