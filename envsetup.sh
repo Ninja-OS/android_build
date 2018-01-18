@@ -625,16 +625,16 @@ function lunch()
     check_product $product
     if [ $? -ne 0 ]
     then
-        # if we can't find a product, try to grab it off the GZOSPGitHub
+        # if we can't find a product, try to grab it off the NinjaOS GitHub
         T=$(gettop)
         cd $T > /dev/null
-        vendor/gzosp/build/tools/roomservice.py $product
+        vendor/ninja/build/tools/roomservice.py $product
         cd - > /dev/null
         check_product $product
     else
         T=$(gettop)
         cd $T > /dev/null
-        vendor/gzosp/build/tools/roomservice.py $product true
+        vendor/ninja/build/tools/roomservice.py $product true
         cd - > /dev/null
     fi
 
