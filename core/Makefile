@@ -2788,17 +2788,6 @@ shadow: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(NinjaOS_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(NinjaOS_TARGET_PACKAGE) > $(NinjaOS_TARGET_PACKAGE).md5sum
 	@echo -e ${CL_BLU}""${CL_BLU}
-        @echo -e ${CL_BLU}" ███▄▄▄▄         ▄█       ███▄▄▄▄             ▄█         ▄████████       ▄██████▄     ▄████████ "${CL_BLU}
-        @echo -e ${CL_BLU}" ███▀▀▀██▄      ███       ███▀▀▀██▄          ███        ███    ███      ███    ███   ███    ███ "${CL_BLU}
-        @echo -e ${CL_BLU}" ███   ███      ███▌      ███   ███          ███        ███    ███      ███    ███   ███    █▀  "${CL_BLU}
-        @echo -e ${CL_BLU}" ███   ███      ███▌      ███   ███          ███        ███    ███      ███    ███   ███        "${CL_BLU}
-        @echo -e ${CL_BLU}" ███   ███      ███▌      ███   ███          ███      ▀███████████      ███    ███ ▀███████████ "${CL_BLU}
-        @echo -e ${CL_BLU}" ███   ███      ███       ███   ███          ███        ███    ███      ███    ███          ███ "${CL_BLU}
-        @echo -e ${CL_BLU}" ███   ███      ███       ███   ███          ███        ███    ███      ███    ███    ▄█    ███ "${CL_BLU}
-        @echo -e ${CL_BLU}" ▀█   █▀       █▀         ▀█   █▀       █▄ ▄███        ███    █▀        ▀██████▀   ▄████████▀   "${CL_BLU}
-        @echo -e ${CL_BLU}"                                         ▀▀▀▀▀▀                                                 "${CL_BLU}
-        @echo -e ${CL_CYN}"       BROUGHT TO YOU BY iamsj7 (SHAIK JALEEL ) AND theHari08 ( Vinesh Iyappan )                "${CL_CYN}
-        @echo -e ${CL_CYN}"                                   Now Flash and Enjoy                                          "${CL_CYN}
 	@echo -e "Package complete: $(NinjaOS_TARGET_PACKAGE)"
 
 endif    # build_ota_package
