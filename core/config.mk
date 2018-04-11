@@ -188,7 +188,7 @@ FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 $(call project-set-path-variant,recovery,RECOVERY_VARIANT,bootable/recovery)
 
 -include vendor/extra/BoardConfigExtra.mk
--include vendor/ninja/config/BoardConfigNinja.mk
+-include vendor/ninja/config/BoardConfigNINJA.mk
 
 # The build system exposes several variables for where to find the kernel
 # headers:
@@ -973,7 +973,7 @@ endif
 ifneq ($(NINJA_BUILD),)
 ## We need to be sure the global selinux policies are included
 ## last, to avoid accidental resetting by device configs
-$(eval include vendor/ninja/sepolicy/common/sepolicy.mk)
+$(eval include device/ninja/sepolicy/common/sepolicy.mk)
 
 # Include any vendor specific config.mk file
 -include $(TOPDIR)vendor/*/build/core/config.mk
